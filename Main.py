@@ -1,3 +1,11 @@
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+
 from typing import Optional
 
 
@@ -44,7 +52,7 @@ class LinkedList:
         """
         # write code here
         self.temp=self.head
-        while true:
+        while True:
             if(self.temp.next==None):
                 print(self.temp.data)
                 break
@@ -64,7 +72,7 @@ class Solution:
         :return: returns the sum as a linked list
         """
         # Write code here
-        result=getnun(first_list)+getnun(second_list)
+        result= self.getnun(first_list)+self.getnun(second_list)
         sum=LinkedList()
         for digit in list(map(int,str(result)[::-1])):
             sum.insert_at_end(digit)
@@ -101,4 +109,5 @@ solution = Solution()
 new_list = solution.addTwoNumbers(first_list, second_list)
 # Display the status of new_list
 new_list.status()
+
 
