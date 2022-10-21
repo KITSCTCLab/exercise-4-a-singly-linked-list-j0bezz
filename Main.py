@@ -30,10 +30,13 @@ class LinkedList:
         """
         # Write code here
         new= Node(data,None)
-        self.temp=self.head
-        if self.temp.next is not None:
-            self.temp=self.temp.next
-        self.temp.next=new.data
+        temp=self.head
+        if temp is None:
+            self.head=new
+        else:
+            while temp.next is not None:
+                temp=temp.next
+            temp.next=new
 
     def status(self):
         """
@@ -97,3 +100,4 @@ solution = Solution()
 new_list = solution.addTwoNumbers(first_list, second_list)
 # Display the status of new_list
 new_list.status()
+
