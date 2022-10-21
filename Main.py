@@ -30,7 +30,7 @@ class LinkedList:
         :param data: integer data that will be used to create a node
         """
         # Write code here
-        new= Node(data,None)
+        new = Node(data,None)
         temp=self.head
         if temp is None:
             self.head=new
@@ -69,7 +69,7 @@ class Solution:
             sum.insert_at_end(digit)
         return sum
         
-    def getnun(self,l: Optional[LinkedList]):        
+    def getnun(self,l: Optional[LinkedList]) -> int:        
         temp=l.head
         num=""
         if temp is None:
