@@ -72,9 +72,10 @@ class Solution:
         
     def getnun(self,l: Optional[LinkedList]):        
         temp=l.head
+        num=""
         if temp is None:
             return 0
-        num=""
+        
         else:
             num=str(temp.data)+num
             temp=temp.next
