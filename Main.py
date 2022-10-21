@@ -64,21 +64,21 @@ class Solution:
         :return: returns the sum as a linked list
         """
         # Write code here
-        self.first=[]
-        self.second=[]
-        self.result=[]
-        for i in first_list:
-            self.first.append(i)
-        for i in second_list:
-            self.second.append(i)
-        self.f=self.first[::-1]
-        self.l=self.last[::-1]
-        for i in range(0,len(self.f)-1):
-            temp=self.f[i]+self.l[i]
-            self.result.append(temp)
-        return self.result
+        result=getnun(first_list)+getnun(second_list)
+        sum=LinkedList()
+        for digit in list(map(int,str(result)[::-1])):
+            sum.insert_at_end(digit)
+        return sum
         
-
+    def getnun(self,l: Optional[LinkedList]):        
+        temp=l.head
+        if temp is None:
+            return 0
+        num=""
+        else:
+            num=str(temp.data)+num
+            temp=temp.next
+        return int(num)
 # Do not edit the following code      
 # Create an instance for LinkedList
 first_list = LinkedList()
