@@ -22,19 +22,32 @@ class LinkedList:
         Initialize the head
         """
         self.head = None
-
+        
     def insert_at_end(self, data):
         """
         Insert node at end of the list
         :param data: integer data that will be used to create a node
         """
         # Write code here
+        new= Node(data,None)
+        self.temp=self.head
+        if self.temp.next != None:
+            self.temp=self.temp.next
+        self.temp.next=new.data
 
     def status(self):
         """
         It prints all the elements of list.
         """
         # write code here
+        self.temp=self.head
+        while true:
+            if(self.temp.next==None):
+                print(self.temp.data)
+                break
+            else:
+                print(self.temp.data)
+                self.temp=self.temp.next
 
 
 class Solution:
@@ -48,7 +61,19 @@ class Solution:
         :return: returns the sum as a linked list
         """
         # Write code here
-        
+        self.first=[]
+        self.second=[]
+        self.result=[]
+        for i in first_list:
+            self.first.append(i)
+        for i in second_list:
+            self.second.append(i)
+        self.f=self.first[::-1]
+        self.l=self.last[::-1]
+        for i in range(0,len(self.f)-1):
+            temp=self.f[i]+self.l[i]
+            self.result.append(temp)
+        return self.result
         
 
 # Do not edit the following code      
