@@ -49,7 +49,7 @@ class LinkedList:
         while temp is not None:
             list.append(temp.data)
             temp=temp.next
-        return list
+        print(list)
 
 
 class Solution:
