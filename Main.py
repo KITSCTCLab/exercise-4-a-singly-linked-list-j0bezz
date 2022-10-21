@@ -31,7 +31,7 @@ class LinkedList:
         # Write code here
         new= Node(data,None)
         self.temp=self.head
-        if self.temp.next != None:
+        if self.temp.next is not None:
             self.temp=self.temp.next
         self.temp.next=new.data
 
